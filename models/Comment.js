@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Repost extends Model {}
+class Comment extends Model {}
 
-Repost.init(
+Comment.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -34,4 +34,4 @@ Repost.init(
     }
 );
 
-module.exports = Repost;
+module.exports = Comment;

@@ -27,19 +27,19 @@
     </div>
     {{else}}
     <div class="card-footer text-end">
-      <p class="fs-6 fst-italic text-muted">RePOSTed by {{post.user.name}} on {{format_date createdAt}}</p>
+      <p class="fs-6 fst-italic text-muted">Commented on by {{post.user.name}} on {{format_date createdAt}}</p>
     </div>
     {{/if}}
     {{#if post.follow_tag}}
     {{/if}}
     {{#if post.content}}
     <div class="btn-group" role="group" aria-label="post options">
-      {{!-- <button type="button" class="btn col-2 btn-sm mx-auto btn-primary mb-3 reblog" id="{{post.id}}">rePOST</button> --}}
+      
     
       <button type="button" class="btn btn-sm mx-1 btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="Like">
       <i class="bi bi-heart"></i>
       </button>
-      <button type="button" class="btn btn-sm mx-1 btn-secondary reblog" id="{{post.id}}" data-bs-toggle="tooltip" data-bs-placement="top" title="rePOST">
+      <button type="button" class="btn btn-sm mx-1 btn-secondary reblog" id="{{post.id}}" data-bs-toggle="tooltip" data-bs-placement="top" title="comment">
       <i class="bi bi-arrow-left-right"></i>
       </button>
       <button type="button" class="btn btn-sm mx-1 btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="Comment">
@@ -48,14 +48,14 @@
     </div>
     
     {{else}}
-    {{!-- <button class="btn col-2 btn-sm mx-auto btn-primary mb-3 reblog" id="{{post.post_id}}">rePOST</button> --}}
+    
     <div class="btn-group" role="group" aria-label="post options">
-      {{!-- <button type="button" class="btn col-2 btn-sm mx-auto btn-primary mb-3 reblog" id="{{post.id}}">rePOST</button> --}}
+      
     
       <button type="button" class="btn btn-sm mx-1 btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="Like">
       <i class="bi bi-heart"></i>
       </button>
-      <button type="button" class="btn btn-sm mx-1 btn-secondary reblog" id="{{post.post_id}}" data-bs-toggle="tooltip" data-bs-placement="top" title="rePOST">
+      <button type="button" class="btn btn-sm mx-1 btn-secondary reblog" id="{{post.post_id}}" data-bs-toggle="tooltip" data-bs-placement="top" title="comment">
       <i class="bi bi-arrow-left-right"></i>
       </button>
       <button type="button" class="btn btn-sm mx-1 btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="Comment">
@@ -70,20 +70,6 @@
 {{/if}}
 
 
-{{!-- {{#if posts.length}}
-<div class="card" id="post-list">
-   {{#each posts as |post|}}
-  <div class="card-content">
-    <div class="content">
-       {{post.content}}
-    </div>
-  </div>
-  <time>Posted by {{post.user.name}} on {{format_date createdAt}}</time>
-  <footer class="card-footer justify-content-center">
-    <button class="btn btn-outline-success reblog-btn" id="{{post.id}}" type="button">rePOST</button>
-  </footer>
-  {{/each}}
-</div>
-{{/if}} --}}
+
 
 <script src="./js/reblog-button.js"></script>

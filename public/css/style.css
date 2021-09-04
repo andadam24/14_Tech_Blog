@@ -1,10 +1,7 @@
-body {
-    background-image: url("../images/pexels-min-an-1629212.jpg")
-    
-}
+
 .custom-card {
   opacity: .95;
-  box-shadow: 5px 5px 10px #6c757d !important;
+  box-shadow: 5px 5px 10px blue !important;
 }
 
 ul {

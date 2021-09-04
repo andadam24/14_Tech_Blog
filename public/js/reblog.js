@@ -16,7 +16,7 @@ var quill = new Quill('#editor', {
     toolbar: toolbarOptions
   },
   theme: 'snow',
-  placeholder: 'Add your thoughts or rePOST...'
+  placeholder: 'Add your thoughts or comment...'
 });
 
 async function newFormHandler(event) {

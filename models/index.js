@@ -1,6 +1,6 @@
 const User = require('./User');
 const Post = require('./Post');
-const Repost = require('./Repost');
+const Comment = require('./Comment');
 
 User.hasMany(Post, {
   foreignKey: 'user_id'
@@ -10,11 +10,11 @@ Post.belongsTo(User, {
   foreignKey: 'user_id'
 });
 
-Post.hasMany(Repost, {
+Post.hasMany(Comment, {
   foreignKey: 'post_id'
 });
 
-User.hasMany(Repost, {
+User.hasMany(Comment, {
   foreignKey: 'user_id'
 });
 
@@ -23,4 +23,4 @@ Post.hasOne(Post, {
 });
 
 
-module.exports = { User, Post, Repost };
+module.exports = { User, Post, Comment };
